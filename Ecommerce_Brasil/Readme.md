@@ -40,23 +40,9 @@ d_dates (Calendario desde min/max fecha real)
 
 2 reportes creados:
 
-1️⃣ KPIs comerciales
+1️⃣ Resumen Ejecutivo
 
-Ingresos totales
-
-Cantidad de productos vendidos
-
-Ticket promedio
-
-Distribución por método de pago
-
-2️⃣ Performance logística
-
-SLA de entrega vs estimado
-
-Revenue por estado (UF)
-
-Satisfacción del cliente (Review Score)
+2️⃣ KPI Comerciales
 
 📍 Relaciones en Estrella: f_sales como tabla central
 
