@@ -49,11 +49,11 @@ d_dates (Calendario desde min/max fecha real)
 📍 Relaciones en Estrella: f_sales como tabla central
 
 🛠️ Tecnologías Utilizadas
-Componente	Tecnología
-Data Lakehouse	Databricks + Spark SQL
-Orquestación	Notebooks dentro de workspace
-Modelado	Star Schema
-Análisis	Power BI Desktop
+
+Data Lakehouse: Databricks + Spark SQL
+Orquestación: Notebooks dentro de workspace
+Modelado: Star Schema
+Análisis: Power BI Desktop
 Dataset	Olist E-Commerce (Kaggle)
 🚀 Próximos Pasos (Backlog)
 
