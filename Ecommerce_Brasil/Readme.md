@@ -15,7 +15,9 @@ Crear visualizaciones que respondan preguntas de negocio sobre ventas, logístic
 🧱 Arquitectura del Data Lakehouse (Medallion)
 Capa	Objetivo	Resultado
 Bronze	Ingesta Raw del dataset (sin modificaciones)	Tablas originales Olist
+
 Silver	Transformación, cast de tipos, eliminación de duplicados, ZIP como INT, fechas como TIMESTAMP	Tablas limpias para Analytics
+
 Gold	Modelo dimensional	⭐ f_sales + Dimensiones (d_customers, d_sellers, d_products, d_dates)
 🧩 Modelo Dimensional
 
