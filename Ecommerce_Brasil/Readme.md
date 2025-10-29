@@ -1,53 +1,38 @@
 ## 🛍️ Olist E-Commerce Analytics — Databricks + Power BI
 
 Este proyecto desarrolla una solución punta a punta de ingesta, modelado, curación y análisis de datos del dataset de Olist (Brasil), aplicando un enfoque Medallion Architecture en Databricks y visualizando métricas clave de negocio en Power BI.
+Para el mismo se toma el siguiente dataset desde Kaggle, el mismo se importa en Databricks, creando las tablas y haciendo el proceso de ETL en la arquitectura mecionada.
 
 ✅ Objetivos del Proyecto
-
-Construir una arquitectura Bronze → Silver → Gold optimizada para Analytics.
-
-Limpiar, transformar y normalizar las principales entidades del e-commerce.
-
-Diseñar un modelo analítico en estrella con tabla de hechos f_sales.
-
-Crear visualizaciones que respondan preguntas de negocio sobre ventas, logística y clientes.
+- Construir una arquitectura Bronze → Silver → Gold optimizada para Analytics.
+- Limpiar, transformar y normalizar las principales entidades del e-commerce.
+- Diseñar un modelo analítico en estrella con tabla de hechos f_sales.
+- Crear visualizaciones que respondan preguntas de negocio sobre ventas, logística y clientes.
 
 🧱 Arquitectura del Data Lakehouse (Medallion)
-Capa	Objetivo	Resultado
-Bronze	Ingesta Raw del dataset (sin modificaciones)	Tablas originales Olist
+Capa	- Objetivo	- Resultado
+- Bronze	Ingesta Raw del dataset (sin modificaciones)	Tablas originales Olist
+- Silver	Transformación, cast de tipos, eliminación de duplicados, ZIP como INT, fechas como TIMESTAMP	Tablas limpias para Analytics
+- Gold	Modelo dimensional	⭐ f_sales + Dimensiones (d_customers, d_sellers, d_products, d_dates)
 
-Silver	Transformación, cast de tipos, eliminación de duplicados, ZIP como INT, fechas como TIMESTAMP	Tablas limpias para Analytics
 
-Gold	Modelo dimensional	⭐ f_sales + Dimensiones (d_customers, d_sellers, d_products, d_dates)
 🧩 Modelo Dimensional
-
-Tabla de hechos
-
-olist_gold.f_sales
+Tabla de hechos: olist_gold.f_sales
 Contiene métricas transaccionales de ventas (revenue, freight, payment, review score) y claves de relación.
 
-Dimensiones
+Dimensiones:
+- d_customers (Localización del cliente)
+- d_sellers (Localización del vendedor)
+- d_products (Categoría de producto traducida al inglés)
+- d_dates (Calendario desde min/max fecha real tomando el parametro de la fact con sequence ())
 
-d_customers (Localización del cliente)
-
-d_sellers (Localización del vendedor)
-
-d_products (Categoría de producto traducida al inglés)
-
-d_dates (Calendario desde min/max fecha real)
-
-📌 d_dates generada dinámicamente con sequence() → evita años incorrectos y asegura continuidad temporal.
 
 📊 Análisis en Power BI
 
 2 reportes creados:
-
 1️⃣ Resumen Ejecutivo
-
 2️⃣ KPI Comerciales
-
 📍 Relaciones en Estrella: f_sales como tabla central
-
 🛠️ Tecnologías Utilizadas
 
 Data Lakehouse: Databricks + Spark SQL
@@ -66,6 +51,7 @@ Implementar Delta Lake + Auto Loader para escenarios incrementales
 
 --------------------------
 
+## Detalles de la arquitectura
 
 El pipeline SQL desarrollado en Databricks implementa un enfoque Medallion Architecture que organiza el flujo de datos en tres niveles de calidad:
 
