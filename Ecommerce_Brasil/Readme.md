@@ -3,6 +3,8 @@
 Este proyecto desarrolla una solución punta a punta de ingesta, modelado, curación y análisis de datos del dataset de Olist (Brasil), aplicando un enfoque Medallion Architecture en Databricks y visualizando métricas clave de negocio en Power BI.
 Para el mismo se toma el siguiente dataset desde Kaggle, el mismo se importa en Databricks, creando las tablas y haciendo el proceso de ETL en la arquitectura mecionada.
 
+Link al dataset: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
 ✅ Objetivos del Proyecto
 - Construir una arquitectura Bronze → Silver → Gold optimizada para Analytics.
 - Limpiar, transformar y normalizar las principales entidades del e-commerce.
