@@ -1,4 +1,4 @@
-🛍️ Olist E-Commerce Analytics — Databricks + Power BI
+## 🛍️ Olist E-Commerce Analytics — Databricks + Power BI
 
 Este proyecto desarrolla una solución punta a punta de ingesta, modelado, curación y análisis de datos del dataset de Olist (Brasil), aplicando un enfoque Medallion Architecture en Databricks y visualizando métricas clave de negocio en Power BI.
 
